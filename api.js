@@ -1,5 +1,5 @@
 import express from 'express'
-const app = express.Router()
+export const app = express.Router()
 
 // parse URLEncoded and JSON req body
 app.use(express.json())
@@ -69,3 +69,5 @@ app.use((req, res, next) =>
   res.set('Content-Type', 'text/plain')
   res.status(404).send("404 NOT FOUND")
 })
+
+export default app
