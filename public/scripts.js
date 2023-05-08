@@ -68,11 +68,19 @@ function playComputer() {
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
-            // update text and image
-            const text = data.player.charAt(0).toUpperCase() + data.player.slice(1)
-            document.getElementById('h3').innerHTML = text
+            // display player's choice
+            const player = data.player.charAt(0).toUpperCase() + data.player.slice(1)
+            document.getElementById('h3_player').innerHTML = player
 
-            document.getElementById('shotImage').src = `./img/${data.player}.jpg`
+            document.getElementById('playerShotImage').src = `./img/${data.player}.jpg`
+
+            // display computer's choice
+            const computer = data.opponent.charAt(0).toUpperCase() + data.opponent.slice(1)
+            document.getElementById('h3_computer').innerHTML = computer
+
+            document.getElementById('computerShotImage').src = `./img/${data.player}.jpg`
+
+
         }).catch((error) => console.error(error))
 
 }
