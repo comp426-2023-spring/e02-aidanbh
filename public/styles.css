@@ -19,8 +19,6 @@ select {
     margin-bottom: 1em;
 }
 
-h1 {
-}
-
-p {
+img {
+    max-width: 8em;
 }
