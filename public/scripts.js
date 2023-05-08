@@ -14,9 +14,20 @@ function goToRules() {
     window.location.href = 'rules.html'
 }
 
+function indexOnLoad() {
+    if (document.getElementById('rpsls_radio').checked) {
+        document.getElementById('lizard').hidden = false
+        document.getElementById('spock').hidden = false
+        document.getElementById('lizard').disabled = false
+        document.getElementById('spock').disabled = false
+    }
+}
+
 function rpsClick() {
     document.getElementById('lizard').hidden = true
     document.getElementById('spock').hidden = true
+    // this is needed for browsers (Safari?) that do not support hidden
+    // in browsers that do (Chrome?) the hidden options don't show and this has no effect
     document.getElementById('lizard').disabled = true
     document.getElementById('spock').disabled = true
 
