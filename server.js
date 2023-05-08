@@ -57,6 +57,7 @@ if (args.debug) {
     console.info('HTTP server is logging to this directory:')
     console.info(logpath)
 }
+
 // Create an app server
 const app = express()
 // Set a port for the server to listen on
@@ -68,6 +69,11 @@ const port = args.port || args.p || process.env.PORT || 8080
 app.use(morgan(':remote-addr - :remote-user [:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"',
     {stream: fs.createWriteStream(path.join(logpath, 'access.log')), flags: 'a' }
 ))
+
+// Serve API under /app
+import { app as api } from "./lib/api.js"
+app.use('/app', api)
+
 // Serve static files
 const staticpath = args.stat || args.s || process.env.STATICPATH || path.join(__dirname, 'public')
 app.use('/', express.static(staticpath))
