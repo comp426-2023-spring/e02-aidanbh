@@ -7,10 +7,16 @@ div {
     margin-left: auto;
     margin-right: auto;
     width: 12em;
+    text-align: center;
 }
 
 button {
     font-size: x-large;
+}
+
+select {
+    font-size: xx-large;
+    margin-bottom: 1em;
 }
 
 h1 {
