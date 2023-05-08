@@ -1,4 +1,12 @@
 body {
+
+}
+
+div {
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
 }
 
 h1 {
