@@ -1,7 +1,7 @@
 {
-  "name": "html-cs-js-demo",
+  "name": "rpsls-webapp",
   "version": "1.0.0",
-  "description": "This is the base code for an html+css+js demo non-assignment (extra credit).",
+  "description": "Play RPS(LS) graphically in a web browser.",
   "main": "server.js",
   "type": "module",
   "scripts": {
