@@ -22,6 +22,7 @@ if (args.h || args.help) {
 usage: node server.js --port=5000
 
 This package serves the static HTML, CSS, and JS files in a /public directory.
+It serves the rpsls-api API under the /app directory.
 It also creates logs in a common log format (CLF) so that you can better.
 
   --stat,  -s    Specify the directory for static files to be served
