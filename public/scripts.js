@@ -15,6 +15,10 @@ function goToRules() {
 }
 
 function indexOnLoad() {
+    document.getElementById('title').innerHTML =
+        (document.getElementById('rps_radio').checked) ?
+         "Rock, Paper, Scissors" : "Rock, Paper, Scissors, Lizard, Spock"
+
     if (document.getElementById('rpsls_radio').checked) {
         document.getElementById('lizard').hidden = false
         document.getElementById('spock').hidden = false
@@ -24,6 +28,8 @@ function indexOnLoad() {
 }
 
 function rpsClick() {
+    document.getElementById('title').innerHTML = "Rock, Paper, Scissors"
+
     document.getElementById('lizard').hidden = true
     document.getElementById('spock').hidden = true
     // this is needed for browsers (Safari?) that do not support hidden
@@ -39,6 +45,9 @@ function rpsClick() {
 }
 
 function rpslsClick() {
+    document.getElementById('title').innerHTML = "Rock, Paper, Scissors, Lizard, Spock"
+
+
     document.getElementById('lizard').hidden = false
     document.getElementById('spock').hidden = false
     document.getElementById('lizard').disabled = false
