@@ -1,13 +1,47 @@
 <html>
-    <head>
-        <title>RPS(LS)</title>
-        <script src="scripts.js"></script>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
 
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+<head>
+    <title>RPS(LS)</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    </body>
+<body>
+
+    <div class="gameSelector">
+        <input type="radio" id="rps_radio" name="gameChoice" value="RPS" onclick="rpsClick()" checked>
+        <label for="rps_radio">RPS</label>
+
+        <input type="radio" id="rpsls_radio" name="gameChoice" value="RPSLS" onclick="rpslsClick()">
+        <label for="rpsls_radio">RPSLS</label>
+    </div>
+
+    <div class="randomPick">
+        <button class="randomPickButton" onclick="goToRandom()" type="button">
+            Random Shot
+        </button>
+    </div>
+
+    <div class="playComputer">
+        <select id="shotSelector" name="playerChoice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+            <option id="lizard" value="lizard" hidden disabled>Lizard</option>
+            <option id="spock" value="Spock" hidden disabled>Spock</option>
+
+        </select>
+        <button class="playComputerButton" onclick="goToPlayComputer()" type="button">
+            Play Computer
+        </button>
+    </div>
+
+    <div class="rulesButton">
+        <button class="viewRulesButton" onclick="goToRules()" type="button">
+            View Rules
+        </button>
+    </div>
+
+</body>
+
 </html>
