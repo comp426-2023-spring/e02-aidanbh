@@ -82,6 +82,19 @@ function playComputer() {
 
             document.getElementById('computerShotImage').src = `./img/${data.player}.jpg`
 
+            // display result
+            switch(data.result) {
+                case 'win':
+                    document.getElementById('h3_result').innerHTML = "You Win! 🥳"
+                    break
+                case 'lose':
+                    document.getElementById('h3_result').innerHTML = "Computer Wins! 😏"
+                    break
+                case 'tie':
+                    document.getElementById('h3_result').innerHTML = "It's a tie. 🤔"
+                    break
+            }
+
         }).catch((error) => console.error(error))
 
 }
