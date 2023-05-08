@@ -7,7 +7,7 @@ function goToRandom() {
 }
 
 function goToPlayComputer() {
-    window.location.href = `play.html?game=${(document.getElementById('rps_radio').checked) ? 'rps' : 'rpsls'}`
+    window.location.href = `play.html?game=${(document.getElementById('rps_radio').checked) ? 'rps' : 'rpsls'}&shot=${document.getElementById('shotSelector').value}`
 }
 
 function goToRules() {
@@ -63,6 +63,8 @@ function playComputer() {
     // set header to match game
     document.getElementById('h2').innerHTML = (game == 'rps') ? "Rock, Paper, Scissors" : "Rock, Paper, Scissors, Lizard, Spock"
 
+
+    console.log(`./app/${game}/play/${shot}`)
     // get API response
     fetch(`./app/${game}/play/${shot}`)
         .then((response) => response.json())
@@ -79,7 +81,6 @@ function playComputer() {
             document.getElementById('h3_computer').innerHTML = computer
 
             document.getElementById('computerShotImage').src = `./img/${data.player}.jpg`
-
 
         }).catch((error) => console.error(error))
 
