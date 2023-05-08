@@ -80,7 +80,7 @@ function playComputer() {
             const computer = data.opponent.charAt(0).toUpperCase() + data.opponent.slice(1)
             document.getElementById('h3_computer').innerHTML = computer
 
-            document.getElementById('computerShotImage').src = `./img/${data.player}.jpg`
+            document.getElementById('computerShotImage').src = `./img/${data.computer}.jpg`
 
             // display result
             switch(data.result) {
