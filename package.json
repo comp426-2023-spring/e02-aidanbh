@@ -18,7 +18,10 @@
     "interface",
     "client",
     "express",
-    "server"
+    "server",
+    "rps",
+    "rpsls",
+    "games"
   ],
   "author": "@jdmar3",
   "license": "GPL-3.0-or-later",
